@@ -1,0 +1,36 @@
+@import '~foundation-sites/scss/foundation';
+
+@include foundation-everything(true);
+
+.SiteHeader {
+  background-color: black;
+}
+
+.LogoImage {
+  width: 500px;
+  max-width: 500px;
+  padding: 0 40px;
+}
+
+.SiteNavigation {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  a {
+    font-family: Courier;
+    display: inline;
+    color: white;
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+
+  a:hover {
+    color: #32CD32;
+  }
+}
+
+
+

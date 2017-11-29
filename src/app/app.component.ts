@@ -3,12 +3,18 @@ import {Component, Input} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
   @Input()
   private imgPath = "assets/images/cyberaptor_logo.png";
-  public bandLogo = require("../assets/images/cyberaptor_logo.png");
-  title = 'Cyberaptor site coming soon...';
+
+  @Input()
+  private topNavigationButtons: Array<string>;
+
+  constructor() {
+    this.topNavigationButtons = ["News", "About", "Listen", "Contact"]
+  }
+
 }
