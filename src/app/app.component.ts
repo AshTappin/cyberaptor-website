@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
 export class AppComponent {
 
   @Input()
-  private imgPAth = "./images/cyberaptor_logo.png";
-  public bandLogo = require("./images/cyberaptor_logo.png");
+  private imgPath = "assets/images/cyberaptor_logo.png";
+  public bandLogo = require("../assets/images/cyberaptor_logo.png");
   title = 'Cyberaptor site coming soon...';
 }
