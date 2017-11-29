@@ -1,6 +1,9 @@
 @import '~foundation-sites/scss/foundation';
 
 @include foundation-everything(true);
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
 
 .SiteHeader {
   background-color: black;
@@ -9,16 +12,25 @@
 .EpImage {
   width: 35%;
   max-width: 500px;
+  min-width: 297px;
   min-height: 300px;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
+.LogoImageContainer {
+  order: -1;
+  padding: 0 40px;
+  width: 100%;
+
+  @media #{$desktop} {
+    order: 0;
+    width: auto;
+  }
+}
 
 .LogoImage {
-  width: 500px;
-  max-width: 500px;
-  padding: 0 40px;
+  order:-1;
+  width: 400px;
 }
 
 
@@ -31,22 +43,33 @@
 .SiteNavigation {
   align-items: flex-end;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
   a {
     font-family: Courier;
-    width: 5%;
-    display: inline;
     color: white;
-    margin: 0 10px;
+    margin: 10px 10px 0;
     padding: 0 10px;
+  }
+
+  .menu-icon {
+    display: none;
   }
 
   a:hover {
     animation-name: toxic;
     animation-duration: 1s;
+  }
+
+  @media #{$tablet} {
+    padding-bottom: 5px;
+  }
+
+  @media #{$desktop} {
+    padding-bottom: 20px;
   }
 }
 @keyframes toxic {
