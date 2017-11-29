@@ -11,6 +11,9 @@ export class AppComponent {
   private imgPath = "assets/images/cyberaptor_logo.png";
 
   @Input()
+  private epImgPath = "assets/images/neonslaughtArt.png";
+
+  @Input()
   private topNavigationButtons: Array<string>;
 
   constructor() {
