@@ -20,7 +20,11 @@ $desktop: "(min-width: 1024px)";
 .LogoImageContainer {
   order: -1;
   padding: 0 40px;
-  width: 100%;
+  width: auto;
+
+  @media #{$tablet} {
+    width: 100%;
+  }
 
   @media #{$desktop} {
     order: 0;
@@ -53,10 +57,21 @@ $desktop: "(min-width: 1024px)";
     color: white;
     margin: 10px 10px 0;
     padding: 0 10px;
+
+    @media #{$mobile} {
+      display: none;
+    }
   }
 
   .menu-icon {
-    display: none;
+
+    @media #{$tablet} {
+      display: none;
+    }
+
+    @media #{$desktop} {
+      display: none;
+    }
   }
 
   a:hover {
