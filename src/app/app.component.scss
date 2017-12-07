@@ -48,10 +48,23 @@ $desktop: "(min-width: 1024px)";
   align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+
+  @media #{$mobile} {
+    flex-wrap: nowrap;
+  }
+
+  @media #{$tablet} {
+    justify-content: center;
+  }
+
+  @media #{$desktop} {
+    justify-content: center;
+  }
+
   a {
     font-family: Courier;
     color: white;
@@ -64,13 +77,17 @@ $desktop: "(min-width: 1024px)";
   }
 
   .menu-icon {
-
     @media #{$tablet} {
       display: none;
     }
 
     @media #{$desktop} {
       display: none;
+    }
+
+    &:hover {
+      animation-name: toxic;
+      animation-duration: 1s;
     }
   }
 
@@ -86,6 +103,12 @@ $desktop: "(min-width: 1024px)";
   @media #{$desktop} {
     padding-bottom: 20px;
   }
+}
+
+.MenuIconContainer {
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 @keyframes toxic {
   from {color: white;}
