@@ -4,6 +4,8 @@
 $mobile: "(max-width: 767px)";
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
 $desktop: "(min-width: 1024px)";
+$toxic-color: #32CD32;
+
 
 .SiteHeader {
   background-color: black;
@@ -70,6 +72,7 @@ $desktop: "(min-width: 1024px)";
     color: white;
     margin: 10px 10px 0;
     padding: 0 10px;
+    transition: color 1s;
 
     @media #{$mobile} {
       display: none;
@@ -77,13 +80,6 @@ $desktop: "(min-width: 1024px)";
   }
 
   .menu-icon {
-    @media #{$tablet} {
-      display: none;
-    }
-
-    @media #{$desktop} {
-      display: none;
-    }
 
     &:hover {
       animation-name: toxic;
@@ -92,8 +88,7 @@ $desktop: "(min-width: 1024px)";
   }
 
   a:hover {
-    animation-name: toxic;
-    animation-duration: 1s;
+    color:$toxic-color;
   }
 
   @media #{$tablet} {
@@ -109,10 +104,19 @@ $desktop: "(min-width: 1024px)";
   padding-bottom: 5px;
   padding-left: 40px;
   padding-right: 40px;
+
+  @media #{$tablet} {
+    display: none;
+  }
+
+  @media #{$desktop} {
+    display: none;
+  }
 }
 @keyframes toxic {
   from {color: white;}
-  to {color: #32CD32;}
+  to {color: $toxic-color;}
+
 
 }
 
