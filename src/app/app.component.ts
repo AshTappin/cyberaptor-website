@@ -8,16 +8,9 @@ import {Component, Input} from '@angular/core';
 export class AppComponent {
 
   @Input()
-  private imgPath = "assets/images/cyberaptor_logo.png";
+  public imgPath = "assets/images/cyberaptor_logo.png";
 
   @Input()
-  private epImgPath = "assets/images/neonslaughtArt.png";
-
-  @Input()
-  private topNavigationButtons: Array<string>;
-
-  constructor() {
-    this.topNavigationButtons = ["News", "About", "Listen", "Contact"]
-  }
+  public epImgPath = "assets/images/neonslaughtArt.png";
 
 }
